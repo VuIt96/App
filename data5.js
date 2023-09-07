@@ -77,14 +77,14 @@ function ready(t) {
     e =
       document
         .querySelector('script[data-chat-service="Salebot"][data-bubble-color]')
-        ?.getAttribute("data-bubble-color") ?? "rgb(57 186 248)",
+        .getAttribute("data-bubble-color"),
     l =
       document
         .querySelector('script[data-chat-service="Salebot"][data-chat-width]')
-        ?.getAttribute("data-chat-width") ?? "450px",
+        .getAttribute("data-chat-width")",
     s =
       document
         .querySelector('script[data-chat-service="Salebot"][data-chat-height]')
-        ?.getAttribute("data-chat-height") ?? "550px";
+        .getAttribute("data-chat-height");
   ready(() => init(t, e, l, s));
 })();
