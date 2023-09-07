@@ -72,19 +72,15 @@ function ready(t) {
 }
 !(function () {
   let t = document
-      .querySelector('script[data-chat-service="Salebot"][data-bot-id]')
-      .getAttribute("data-bot-id"),
+      .querySelector('script[data-chat-service="Salebot"][data-bot-id]'),
     e =
       document
-        .querySelector('script[data-chat-service="Salebot"][data-bubble-color]')
-        .getAttribute("data-bubble-color"),
+        .querySelector('script[data-chat-service="Salebot"][data-bubble-color]'),
     l =
       document
-        .querySelector('script[data-chat-service="Salebot"][data-chat-width]')
-        .getAttribute("data-chat-width")",
+        .querySelector('script[data-chat-service="Salebot"][data-chat-width]'),
     s =
       document
-        .querySelector('script[data-chat-service="Salebot"][data-chat-height]')
-        .getAttribute("data-chat-height");
+        .querySelector('script[data-chat-service="Salebot"][data-chat-height]');
   ready(() => init(t, e, l, s));
 })();
