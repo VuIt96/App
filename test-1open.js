@@ -11,12 +11,6 @@ async function init(t, l = "450px", s = "550px", domain="https://owllee.io") {
     if (!response.ok) {
         throw new Error(`error: ${response.status}`);
     }
-   if (v) {
-        // Hiển thị iframe chatbot
-        $.style.display = "block";
-        $.style.opacity = "1";
-        a = true; // Set biến a để đánh dấu rằng iframe chatbot đã mở
-    }
     const data = await response.json();
 	bubbleButtonAlign = data.bubble_button_align;
 	bubbleButtonColor = data.bubble_button_color;
@@ -70,6 +64,12 @@ async function init(t, l = "450px", s = "550px", domain="https://owllee.io") {
         $.style.setProperty("-webkit-user-select", "none"),
         $.style.setProperty("-khtml-user-select", "none"),
         ($.src = i);
+
+	if (v) {
+	    $.style.display = "block";
+	    $.style.opacity = "1";
+	a = true;
+	}
     let a = false;
     r.addEventListener("click", () => {
         a
