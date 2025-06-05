@@ -5,7 +5,7 @@ async function init(t, l = "450px", s = "550px", domain="https://owlla-dev.think
   let a = false;
   let bubbleButtonAlign = 'right';
   let bubbleButtonColor = '#3075FF';
-  const apiUrl = `https://owlla-dev.thinklabs.com.vn/api/chat-website/start?agent_id=${id}`;
+  const apiUrl = `${domain}/api/chat-website/start?agent_id=${id}`;
 
   const response = await fetch(apiUrl);
 
@@ -17,7 +17,7 @@ async function init(t, l = "450px", s = "550px", domain="https://owlla-dev.think
   bubbleButtonColor = data.bubble_button_color;
   v = data.is_auto_open_bubble;
 
-  iconLogo = `https://owlla-dev.thinklabs.com.vn/${data.avatar_uri}`;
+  iconLogo = `${domain}/${data.avatar_uri}`;
   const img = document.createElement("img");
   img.src = `${iconLogo}`;
   img.style.width = "60px";
@@ -26,7 +26,7 @@ async function init(t, l = "450px", s = "550px", domain="https://owlla-dev.think
   img.style.backgroundColor = bubbleButtonColor;
   img.style.borderRadius = "50%";
 
-  let i = `https://owlee-dev.thinklabs.com.vn`,
+  let i = `${domain}/login`,
     r = document.createElement("div");
   (r.style.position = "fixed"),
     (r.style.bottom = "20px"),
