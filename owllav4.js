@@ -5,7 +5,7 @@ async function init(t, l = "450px", s = "550px", domain="https://owlee-dev.think
   let a = false;
   let bubbleButtonAlign = 'right';
   let bubbleButtonColor = '#3075FF';
-  const apiUrl = `${domain}/api/chat-website/start?agent_id=${id}`;
+  const apiUrl = `https://owlee-dev.thinklabs.com.vn/api/chat-website/start?agent_id=${id}`;
 
   const response = await fetch(apiUrl);
 
@@ -17,7 +17,7 @@ async function init(t, l = "450px", s = "550px", domain="https://owlee-dev.think
   bubbleButtonColor = data.bubble_button_color;
   v = data.is_auto_open_bubble;
 
-  iconLogo = `${domain}${data.avatarUri}`;
+  iconLogo = `https://owlee-dev.thinklabs.com.vn/${data.avatarUri}`;
   const img = document.createElement("img");
   img.src = `${iconLogo}`;
   img.style.width = "60px";
