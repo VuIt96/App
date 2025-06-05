@@ -118,4 +118,3 @@ function ready(t) {
       .getAttribute("data-chat-domain");
   ready(() => init(t, l, s, domain));
 })();
-a
