@@ -27,7 +27,7 @@ async function init(t, l = "450px", s = "550px", domain="https://owlee-dev.think
   img.style.borderRadius = "50%";
 
   let i = `${domain}/chatbot-iframe/${id}`,
-  r = document.createElement("div");
+    r = document.createElement("div");
   (r.style.position = "fixed"),
     (r.style.bottom = "20px"),
     (r.style[bubbleButtonAlign] = "20px"),
@@ -65,7 +65,7 @@ async function init(t, l = "450px", s = "550px", domain="https://owlee-dev.think
     $.style.setProperty("-moz-user-select", "none"),
     $.style.setProperty("-webkit-user-select", "none"),
     $.style.setProperty("-khtml-user-select", "none"),
-  ($.src = i);
+    ($.src = i);
 
   if (v) {
     $.style.display = "block";
@@ -90,8 +90,8 @@ async function init(t, l = "450px", s = "550px", domain="https://owlee-dev.think
         (r.innerHTML =
           '<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path stroke="none" d="M0 0h24v24H0z" fill="none"></path> <path d="M18 6l-12 12"></path> <path d="M6 6l12 12"></path> </svg>'));
   });
-    document.body.appendChild(r);
-    document.body.appendChild($);
+  document.body.appendChild(r);
+  document.body.appendChild($);
 }
 
 function ready(t) {
@@ -118,3 +118,4 @@ function ready(t) {
       .getAttribute("data-chat-domain");
   ready(() => init(t, l, s, domain));
 })();
+a
